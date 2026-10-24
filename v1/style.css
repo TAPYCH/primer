@@ -71,7 +71,7 @@ section[id] { scroll-margin-top: 70px; }
 .logo b { font-weight: 800; margin-left: 4px; color: var(--neon); }
 .ball-dot { fill: var(--neon); filter: drop-shadow(0 0 4px var(--neon)); }
 .menu { display: flex; align-items: center; gap: 4px; margin-left: auto; }
-.menu a { text-decoration: none; font-size: 14px; font-weight: 600; color: var(--muted); padding: 8px 14px; border-radius: 999px; transition: color .2s, background .2s; }
+.menu a { white-space: nowrap; text-decoration: none; font-size: 14px; font-weight: 600; color: var(--muted); padding: 8px 14px; border-radius: 999px; transition: color .2s, background .2s; }
 .menu a:hover { color: var(--text); background: rgba(255, 255, 255, .06); }
 .menu-phone { color: var(--text) !important; }
 .burger { display: none; width: 46px; height: 46px; border-radius: 50%; border: 1px solid var(--line2); background: rgba(255, 255, 255, .04); position: relative; cursor: pointer; margin-left: auto; }
@@ -267,6 +267,10 @@ section[id] { scroll-margin-top: 70px; }
 .footer-row a:hover { color: var(--neon); }
 
 /* адаптив */
+@media (max-width: 1220px) and (min-width: 961px) {
+  .menu-phone { display: none; }
+  .header { gap: 20px; }
+}
 @media (max-width: 1100px) {
   .hero-actions { margin-right: 0; }
   .live-card { position: relative; right: auto; bottom: auto; width: auto; margin: 40px 24px 0; }

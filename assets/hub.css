@@ -73,12 +73,12 @@ body::after {
 }
 .nav.is-scrolled { background: rgba(9, 9, 11, .72); -webkit-backdrop-filter: blur(16px) saturate(1.5); backdrop-filter: blur(16px) saturate(1.5); padding-top: 12px; padding-bottom: 12px; border-color: var(--line); }
 .nav.is-hidden { transform: translateY(-100%); }
-.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -.01em; }
+.brand { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; font-weight: 700; font-size: 17px; letter-spacing: -.01em; white-space: nowrap; }
 .brand em { font-style: normal; font-weight: 400; color: var(--dim); }
 .logo-mark { width: 34px; height: 34px; }
 .logo-ball { fill: var(--lime); }
 .nav-links { display: flex; gap: 4px; margin-left: auto; }
-.nav-links a { text-decoration: none; font-size: 14px; color: var(--muted); padding: 8px 14px; border-radius: 999px; transition: color .2s, background .2s; }
+.nav-links a { white-space: nowrap; text-decoration: none; font-size: 14px; color: var(--muted); padding: 8px 14px; border-radius: 999px; transition: color .2s, background .2s; }
 .nav-links a:hover { color: var(--text); background: rgba(255, 255, 255, .06); }
 .burger { display: none; width: 44px; height: 44px; border-radius: 50%; border: 1px solid var(--line2); background: transparent; position: relative; cursor: pointer; }
 .burger i { position: absolute; left: 13px; right: 13px; height: 1.5px; background: var(--text); transition: transform .35s var(--ease-out), top .35s; }
@@ -322,6 +322,11 @@ body::after {
 .footer-in { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
 
 /* адаптив */
+@media (max-width: 1160px) {
+  .brand em { display: none; }
+  .nav { gap: 16px; }
+  .nav-links a { padding: 8px 10px; }
+}
 @media (max-width: 1080px) {
   .hero-grid { grid-template-columns: minmax(0, 1fr); }
   .court-stage { height: 460px; margin-top: 10px; }
