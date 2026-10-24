@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Padel Apsny — концепции сайта и система бронирования</title>
+  <meta name="description" content="Презентация для Padel Apsny (Сухум): три концепции дизайна сайта, онлайн- и офлайн-бронирование кортов и админ-панель.">
+  <meta name="theme-color" content="#09090b">
+  <meta property="og:title" content="Padel Apsny — концепции сайта">
+  <meta property="og:description" content="3 дизайна, онлайн-бронирование и админ-панель. Можно потрогать.">
+  <meta property="og:image" content="https://tapych.github.io/primer/assets/previews/og.jpg">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/shared/motion.css">
+  <link rel="stylesheet" href="assets/hub.css">
+</head>
+<body>
+  <div class="progress" data-progress></div>
+  <div class="mesh" aria-hidden="true"><i></i><i></i><i></i></div>
+
+  <header class="nav" data-header>
+    <a class="brand" href="#top" aria-label="Padel Apsny — в начало">
+      <svg class="logo-mark" viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(-35 30 34)" fill="none" stroke="currentColor" stroke-linecap="round"><rect x="19" y="10" width="22" height="27" rx="11" stroke-width="4.5"/><path d="M30 37v14" stroke-width="5.5"/></g><g transform="rotate(-35 30 34)" fill="currentColor"><circle cx="26" cy="19" r="2"/><circle cx="34" cy="19" r="2"/><circle cx="30" cy="24" r="2"/><circle cx="26" cy="29" r="2"/><circle cx="34" cy="29" r="2"/></g><circle class="logo-ball" cx="48" cy="15" r="7"/></svg>
+      <span>Padel Apsny <em>/ концепция</em></span>
+    </a>
+    <nav class="nav-links" data-menu aria-label="Разделы">
+      <a href="#concepts">Концепты</a>
+      <a href="#try">Демо</a>
+      <a href="#how">Как устроено</a>
+      <a href="#admin">Админка</a>
+      <a href="#stages">Этапы</a>
+    </nav>
+    <a class="btn btn--light nav-cta" href="#concepts">Смотреть</a>
+    <button class="burger" type="button" data-menu-toggle aria-label="Меню" aria-expanded="false"><i></i><i></i></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow" data-reveal="fade"><span class="dot"></span>Презентация для Padel Apsny · Сухум</p>
+          <h1 data-split>Сайт, на котором корт бронируют за&nbsp;<span class="grad" data-split-whole>30&nbsp;секунд</span></h1>
+          <p class="lead" data-reveal data-delay="350">Три концепции дизайна, единая система онлайн- и офлайн-бронирования и удобная админ-панель. Это не картинки: всё работает, можно нажимать.</p>
+          <div class="hero-actions" data-reveal data-delay="500">
+            <a class="btn btn--accent" href="#concepts" data-magnetic>Смотреть концепты <span aria-hidden="true">↓</span></a>
+            <a class="btn btn--ghost" href="admin/">Админ-панель</a>
+          </div>
+          <ul class="hero-points" data-stagger="90">
+            <li><b>3</b><span>стиля на выбор</span></li>
+            <li><b>24/7</b><span>онлайн-бронь</span></li>
+            <li><b>0</b><span>двойных броней</span></li>
+          </ul>
+        </div>
+
+        <div class="court-stage" aria-hidden="true" data-reveal="scale" data-delay="200">
+          <div class="court-3d">
+            <svg class="court-lines" viewBox="0 0 100 200" preserveAspectRatio="none">
+              <rect x="1" y="1" width="98" height="198" rx="2"/>
+              <line x1="0" y1="100" x2="100" y2="100" class="net"/>
+              <line x1="0" y1="30.5" x2="100" y2="30.5"/>
+              <line x1="0" y1="169.5" x2="100" y2="169.5"/>
+              <line x1="50" y1="30.5" x2="50" y2="169.5"/>
+            </svg>
+            <span class="player p1"></span><span class="player p2"></span>
+            <span class="player p3"></span><span class="player p4"></span>
+            <span class="ball-shadow"></span>
+            <span class="ball"><i></i></span>
+          </div>
+          <div class="float-card fc-1">
+            <span class="fc-label">Новая бронь</span>
+            <b>Корт 2 · 19:30</b>
+            <span class="fc-meta"><i class="pill pill--online">Онлайн</i> 3 600 ₽</span>
+          </div>
+          <div class="float-card fc-2">
+            <span class="fc-label">Загрузка сегодня</span>
+            <b>78%</b>
+            <span class="bars"><i style="--h:40%"></i><i style="--h:55%"></i><i style="--h:35%"></i><i style="--h:70%"></i><i style="--h:90%"></i><i style="--h:100%"></i><i style="--h:85%"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="ticker" data-marquee aria-hidden="true">
+        <div><span>Онлайн-бронь</span><span>Офлайн-брони</span><span>Админ-панель</span><span>Тарифы</span><span>Telegram-уведомления</span><span>Аналитика</span><span>Адаптив</span><span>Онлайн-оплата</span></div>
+      </div>
+    </section>
+
+    <!-- CONCEPTS -->
+    <section class="section" id="concepts">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker" data-reveal>01 — Концепции</p>
+          <h2 data-split="words">Три характера одного клуба</h2>
+          <p class="sec-sub" data-reveal>Функции и бронирование одинаковые, отличаются настроение, типографика и подача. Выберите стиль, который лучше всего передаёт атмосферу Padel Apsny.</p>
+        </div>
+
+        <div class="concepts">
+          <article class="concept" style="--c1:#d4ff3a;--c2:#2b6bff;--cbg:#07090c" data-reveal>
+            <a class="concept-media" href="v1/" aria-label="Открыть концепт «Неон»">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>padel-apsny.ru</span></div>
+                <div class="browser-view"><img src="assets/previews/v1.webp" alt="Концепт «Неон» — главная страница" loading="lazy" decoding="async"></div>
+              </div>
+              <div class="phone"><img src="assets/previews/v1-m.webp" alt="" loading="lazy" decoding="async"></div>
+            </a>
+            <div class="concept-info">
+              <span class="concept-num">01</span>
+              <h3>Неон <small>Night Court</small></h3>
+              <p>Тёмная премиальная эстетика вечерних игр: неоновые акценты цвета мяча, стекло и свечение. Для энергичного, молодого, «клубного» позиционирования.</p>
+              <ul class="tags"><li>Тёмная тема</li><li>Unbounded</li><li>Свечение</li><li>3D-наклон карточек</li></ul>
+              <div class="swatches" aria-label="Палитра"><i style="background:#07090c"></i><i style="background:#d4ff3a"></i><i style="background:#2b6bff"></i><i style="background:#f2f5f0"></i></div>
+              <a class="btn btn--accent" href="v1/" data-magnetic>Открыть концепт <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="concept concept--rev" style="--c1:#0e7c86;--c2:#ff7a59;--cbg:#f6f1e9" data-reveal>
+            <a class="concept-media" href="v2/" aria-label="Открыть концепт «Море»">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>padel-apsny.ru</span></div>
+                <div class="browser-view"><img src="assets/previews/v2.webp" alt="Концепт «Море» — главная страница" loading="lazy" decoding="async"></div>
+              </div>
+              <div class="phone"><img src="assets/previews/v2-m.webp" alt="" loading="lazy" decoding="async"></div>
+            </a>
+            <div class="concept-info">
+              <span class="concept-num">02</span>
+              <h3>Море <small>Black Sea Club</small></h3>
+              <p>Светлый курортный стиль: песок, бирюза, закатный коралл и элегантная типографика. Подчёркивает главное преимущество — падел у самого моря в Сухуме.</p>
+              <ul class="tags"><li>Светлая тема</li><li>Playfair Display</li><li>Волны</li><li>Горизонтальная галерея</li></ul>
+              <div class="swatches" aria-label="Палитра"><i style="background:#f6f1e9"></i><i style="background:#0e7c86"></i><i style="background:#ff7a59"></i><i style="background:#0d2b33"></i></div>
+              <a class="btn btn--accent" href="v2/" data-magnetic>Открыть концепт <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+
+          <article class="concept" style="--c1:#ffffff;--c2:#8e8e93;--cbg:#ffffff" data-reveal>
+            <a class="concept-media" href="v3/" aria-label="Открыть концепт «Минимал»">
+              <div class="browser">
+                <div class="browser-bar"><i></i><i></i><i></i><span>padel-apsny.ru</span></div>
+                <div class="browser-view"><img src="assets/previews/v3.webp" alt="Концепт «Минимал» — главная страница" loading="lazy" decoding="async"></div>
+              </div>
+              <div class="phone"><img src="assets/previews/v3-m.webp" alt="" loading="lazy" decoding="async"></div>
+            </a>
+            <div class="concept-info">
+              <span class="concept-num">03</span>
+              <h3>Минимал <small>Swiss / Apple</small></h3>
+              <p>Строгий монохром, много воздуха и крупная типографика. Кинематографичные эффекты прокрутки в духе презентаций Apple: изображение раскрывается, текст «проявляется».</p>
+              <ul class="tags"><li>Монохром</li><li>Onest</li><li>Scroll-эффекты</li><li>Светлая и тёмная тема</li></ul>
+              <div class="swatches" aria-label="Палитра"><i style="background:#ffffff"></i><i style="background:#f5f5f7"></i><i style="background:#86868b"></i><i style="background:#1d1d1f"></i></div>
+              <a class="btn btn--accent" href="v3/" data-magnetic>Открыть концепт <span aria-hidden="true">→</span></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRY -->
+    <section class="section section--tight" id="try">
+      <div class="wrap">
+        <div class="try" data-reveal="scale">
+          <div class="try-head">
+            <p class="kicker">02 — Попробуйте сами</p>
+            <h2>Демо-сценарий за 1 минуту</h2>
+            <p class="sec-sub">Откройте сайт и админ-панель в двух вкладках рядом. Данные синхронизируются вживую.</p>
+          </div>
+          <ol class="steps" data-stagger="120">
+            <li>
+              <span class="step-n">1</span>
+              <h3>Забронируйте корт</h3>
+              <p>Выберите дату, корт и время в любом концепте. Цена считается автоматически по тарифу.</p>
+              <a class="link" href="v1/#booking">Забронировать в «Неоне» →</a>
+            </li>
+            <li>
+              <span class="step-n">2</span>
+              <h3>Откройте админку</h3>
+              <p>Ваша бронь уже в расписании со статусом «Ожидает», а менеджер получает уведомление.</p>
+              <a class="link" href="admin/">Открыть админ-панель →</a>
+            </li>
+            <li>
+              <span class="step-n">3</span>
+              <h3>Добавьте офлайн-бронь</h3>
+              <p>Клиент позвонил? Нажмите на свободную ячейку в расписании. Это время сразу закроется на сайте.</p>
+              <a class="link" href="admin/#schedule">Создать бронь по звонку →</a>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker" data-reveal>03 — Как это устроено</p>
+          <h2 data-split="words">Одно расписание для всех каналов</h2>
+          <p class="sec-sub" data-reveal>Брони с сайта, по телефону и на ресепшене попадают в одну систему. Она проверяет пересечения, считает стоимость и уведомляет всех участников.</p>
+        </div>
+
+        <div class="flow" data-inview>
+          <div class="flow-col flow-col--in">
+            <div class="node" data-reveal="left"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></svg></span><div><b>Сайт</b><small>клиент бронирует сам, 24/7</small></div></div>
+            <div class="node" data-reveal="left" data-delay="100"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span><div><b>Телефон</b><small>администратор вносит бронь</small></div></div>
+            <div class="node" data-reveal="left" data-delay="200"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="m16 11 2 2 4-4"/></svg></span><div><b>Ресепшн</b><small>клиент пришёл без записи</small></div></div>
+          </div>
+          <div class="flow-lines flow-lines--in" aria-hidden="true">
+            <svg viewBox="0 0 100 300" preserveAspectRatio="none"><path d="M0 50 C 60 50, 40 150, 100 150"/><path d="M0 150 L 100 150"/><path d="M0 250 C 60 250, 40 150, 100 150"/></svg>
+          </div>
+          <div class="flow-core" data-reveal="scale" data-delay="250">
+            <div class="core-ring"></div>
+            <span class="core-label">Ядро бронирования</span>
+            <ul>
+              <li>Единое расписание кортов</li>
+              <li>Защита от двойных броней</li>
+              <li>Тарифы: утро / день / вечер / выходные</li>
+              <li>Статусы и оплаты</li>
+            </ul>
+          </div>
+          <div class="flow-lines flow-lines--out" aria-hidden="true">
+            <svg viewBox="0 0 100 300" preserveAspectRatio="none"><path d="M0 150 C 60 150, 40 37, 100 37"/><path d="M0 150 C 60 150, 40 112, 100 112"/><path d="M0 150 C 60 150, 40 188, 100 188"/><path d="M0 150 C 60 150, 40 263, 100 263"/></svg>
+          </div>
+          <div class="flow-col flow-col--out">
+            <div class="node" data-reveal="right" data-delay="300"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span><div><b>Админ-панель</b><small>расписание, клиенты, касса</small></div></div>
+            <div class="node" data-reveal="right" data-delay="380"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m22 2-7 20-4-9-9-4z"/><path d="M22 2 11 13"/></svg></span><div><b>Telegram и SMS</b><small>подтверждения и напоминания</small></div></div>
+            <div class="node" data-reveal="right" data-delay="460"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><div><b>Онлайн-оплата</b><small>предоплата или полная</small></div></div>
+            <div class="node" data-reveal="right" data-delay="540"><span class="node-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg></span><div><b>Аналитика</b><small>выручка, загрузка, каналы</small></div></div>
+          </div>
+        </div>
+
+        <div class="duo">
+          <div class="duo-card" data-reveal>
+            <span class="pill pill--online">Онлайн</span>
+            <h3>Клиент бронирует сам</h3>
+            <ol>
+              <li>Выбирает дату, корт и длительность (60, 90 или 120 минут)</li>
+              <li>Видит только свободное время и сразу итоговую цену</li>
+              <li>Оставляет имя и телефон, может добавить ракетки, мячи или тренера</li>
+              <li>Получает код брони, SMS и событие в календарь</li>
+              <li>Администратор видит бронь мгновенно и подтверждает в один клик</li>
+            </ol>
+          </div>
+          <div class="duo-card" data-reveal data-delay="120">
+            <span class="pill pill--offline">Офлайн</span>
+            <h3>Звонок или визит в клуб</h3>
+            <ol>
+              <li>Администратор нажимает на свободную ячейку в расписании</li>
+              <li>Вводит имя и телефон; постоянных клиентов система подсказывает</li>
+              <li>Отмечает источник («Телефон» или «На месте») и оплату</li>
+              <li>Время сразу закрывается на сайте, двойной брони не будет</li>
+              <li>Вся история клиента и выручка сохраняются для аналитики</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section class="section section--tight">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker" data-reveal>04 — Возможности</p>
+          <h2 data-split="words">Всё, что нужно клубу</h2>
+        </div>
+        <div class="bento" data-stagger="70">
+          <div class="b b--wide b--accent"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M13 2 3 14h9l-1 8 10-12h-9z"/></svg></span><h3>Бронь за 30 секунд</h3><p>Три шага без регистрации и паролей. Работает на любом телефоне.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span><h3>Без накладок</h3><p>Система не даст занять уже забронированное время.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2v6M4.9 10.9l1.4 1.4M2 18h2M20 18h2M17.7 12.3l1.4-1.4M22 22H2M9 5l3-3 3 3M16 18a4 4 0 0 0-8 0"/></svg></span><h3>Гибкие тарифы</h3><p>Утро, день, вечер, выходные. Цены меняются в админке.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.9 1.9 0 0 0 3.4 0"/></svg></span><h3>Уведомления</h3><p>Telegram-бот для персонала, SMS-напоминание клиенту.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20M6 15h4"/></svg></span><h3>Онлайн-оплата</h3><p>Предоплата снижает количество неявок.</p></div>
+          <div class="b b--wide"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18"/><path d="M8 17V11M13 17V7M18 17v-4"/></svg></span><h3>Аналитика загрузки</h3><p>Какие часы пустуют, сколько приносит каждый корт, откуда приходят клиенты. Решения на основе цифр.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2z"/><path d="M13 5v2M13 17v2M13 11v2"/></svg></span><h3>Абонементы</h3><p>Пакеты часов, сертификаты, промокоды.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9M16 3.1a4 4 0 0 1 0 7.8"/></svg></span><h3>Роли</h3><p>Владелец, администратор, тренер: у каждого свой доступ.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="m5 8 6 6M4 14l6-6 2-3M2 5h12M7 2h1M22 22l-5-10-5 10M14 18h6"/></svg></span><h3>RU / EN / Аԥсуа</h3><p>Мультиязычность для туристов.</p></div>
+          <div class="b"><span class="b-ico"><svg class="i" viewBox="0 0 24 24" aria-hidden="true"><path d="M4.5 16.5c-1.5 1.3-2 5-2 5s3.7-.5 5-2c.7-.8.7-2.1-.1-2.9a2.2 2.2 0 0 0-2.9-.1z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.9A12.9 12.9 0 0 1 22 2c0 2.7-.8 7.5-6 11a22.4 22.4 0 0 1-4 2z"/><path d="M9 12H4s.6-3 2-4c1.6-1.1 5 0 5 0M12 15v5s3-.6 4-2c1.1-1.6 0-5 0-5"/></svg></span><h3>Скорость и SEO</h3><p>Быстрая загрузка, высокие позиции в поиске.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ADMIN -->
+    <section class="section" id="admin">
+      <div class="wrap admin-grid">
+        <div class="admin-copy">
+          <p class="kicker" data-reveal>05 — Админ-панель</p>
+          <h2 data-split="words">Управление клубом с телефона</h2>
+          <p class="sec-sub" data-reveal>Администратор видит весь день на одном экране: корты, время, кто играет, кто оплатил. Создать или перенести бронь — пара нажатий.</p>
+          <ul class="checks" data-stagger="80">
+            <li>Расписание «корты × время» с текущим временем</li>
+            <li>Онлайн- и офлайн-брони, цвет по источнику</li>
+            <li>Статусы: ожидает, подтверждена, завершена, отменена</li>
+            <li>Отметка оплаты, комментарии, история клиента</li>
+            <li>Аналитика: выручка, загрузка, тепловая карта часов</li>
+            <li>Настройки цен и часов работы, отражаются на сайте сразу</li>
+          </ul>
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn--accent" href="admin/" data-magnetic>Открыть админ-панель <span aria-hidden="true">→</span></a>
+          </div>
+          <p class="hint" data-reveal>Демо-вход: логин <code>admin</code>, пароль <code>demo</code>, уже подставлены.</p>
+        </div>
+        <a class="admin-shot" href="admin/" data-reveal="right" data-tilt="4" aria-label="Открыть админ-панель">
+          <img src="assets/previews/admin.webp" alt="Админ-панель Padel Apsny: расписание кортов" loading="lazy" decoding="async">
+          <img class="admin-shot-m" src="assets/previews/admin-m.webp" alt="" loading="lazy" decoding="async">
+        </a>
+      </div>
+    </section>
+
+    <!-- STAGES -->
+    <section class="section section--tight" id="stages">
+      <div class="wrap">
+        <div class="sec-head">
+          <p class="kicker" data-reveal>06 — Этапы</p>
+          <h2 data-split="words">От концепции до запуска</h2>
+        </div>
+        <ol class="timeline" data-stagger="110">
+          <li><span>01</span><h3>Бриф и выбор стиля</h3><p>Утверждаем концепцию, собираем фото клуба, цены, тексты и пожелания.</p></li>
+          <li><span>02</span><h3>Дизайн</h3><p>Прорабатываем все страницы и состояния под реальный контент клуба.</p></li>
+          <li><span>03</span><h3>Разработка</h3><p>Сайт, система бронирования, админ-панель и база данных на сервере.</p></li>
+          <li><span>04</span><h3>Интеграции</h3><p>Онлайн-оплата, Telegram-бот, SMS, Яндекс Карты и аналитика.</p></li>
+          <li><span>05</span><h3>Запуск и поддержка</h3><p>Домен, хостинг, обучение администраторов, сопровождение.</p></li>
+        </ol>
+
+        <div class="stack" data-reveal>
+          <div>
+            <h3>Технологии</h3>
+            <p>Демо: чистый HTML, CSS и JavaScript без тяжёлых фреймворков, поэтому страницы открываются мгновенно даже на мобильном интернете. Боевая версия: тот же интерфейс плюс сервер (Node.js и PostgreSQL), защищённый вход персонала, резервные копии.</p>
+          </div>
+          <ul class="stack-list">
+            <li>HTML5 / CSS3</li><li>Vanilla JS</li><li>Node.js</li><li>PostgreSQL</li><li>Telegram Bot API</li><li>Онлайн-эквайринг</li><li>Яндекс Карты</li><li>PWA</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section cta">
+      <div class="wrap">
+        <h2 data-split="words">Какой стиль ближе Padel Apsny?</h2>
+        <p class="sec-sub" data-reveal>Выберите концепцию, и она станет основой сайта клуба: с вашими фото, ценами и текстами.</p>
+        <div class="cta-links" data-stagger="100">
+          <a href="v1/" class="cta-card" style="--c:#d4ff3a"><span>01</span><b>Неон</b><i>→</i></a>
+          <a href="v2/" class="cta-card" style="--c:#2bb3c0"><span>02</span><b>Море</b><i>→</i></a>
+          <a href="v3/" class="cta-card" style="--c:#ffffff"><span>03</span><b>Минимал</b><i>→</i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-in">
+      <span>Концепция подготовлена для Padel Apsny · Сухум · 2026</span>
+      <span>Демо-версия: цены, адрес и отзывы условные · фото Unsplash</span>
+    </div>
+  </footer>
+
+  <script src="assets/shared/motion.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+/* Padel Apsny — общие стили анимаций, лайтбокса и панели концептов */
+:root {
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+  --ease-in-out: cubic-bezier(.65, 0, .35, 1);
+}
+
+/* появление при прокрутке — только когда JS загружен, иначе контент виден сразу */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, 44px, 0);
+  transition: opacity .9s var(--ease-out), transform 1.1s var(--ease-out), clip-path 1.2s var(--ease-out);
+  transition-delay: var(--d, 0ms);
+}
+.js [data-reveal="fade"] { transform: none; }
+.js [data-reveal="scale"] { transform: scale(.94); }
+.js [data-reveal="left"] { transform: translate3d(-48px, 0, 0); }
+.js [data-reveal="right"] { transform: translate3d(48px, 0, 0); }
+.js [data-reveal].is-in { opacity: 1; transform: none; }
+/* «шторка» обрезает потомков: полностью обрезанный элемент IntersectionObserver не замечает */
+.js [data-reveal="clip"], .js [data-reveal="clip-x"] { opacity: 1; transform: none; }
+.js [data-reveal="clip"] > * { clip-path: inset(100% 0 0 0); transition: clip-path 1.2s var(--ease-out) var(--d, 0ms); }
+.js [data-reveal="clip-x"] > * { clip-path: inset(0 100% 0 0); transition: clip-path 1.2s var(--ease-out) var(--d, 0ms); }
+.js [data-reveal="clip"].is-in > *, .js [data-reveal="clip-x"].is-in > * { clip-path: inset(0 0 0 0); }
+
+.js [data-split] .w { display: inline-block; overflow: hidden; vertical-align: top; padding: 0 .02em .14em; margin-bottom: -.14em; }
+.js [data-split] .c {
+  display: inline-block;
+  transform: translate3d(0, 115%, 0) rotate(4deg);
+  transform-origin: 0 100%;
+  transition: transform 1s var(--ease-out);
+  transition-delay: calc(var(--i, 0) * 22ms + var(--d, 0ms));
+}
+.js [data-split="words"] .c { transition-delay: calc(var(--i, 0) * 70ms + var(--d, 0ms)); }
+.js [data-split].is-in .c { transform: none; }
+
+.is-still [data-reveal], .is-still [data-reveal] > *, .is-still [data-split] .c {
+  opacity: 1 !important; transform: none !important; clip-path: none !important; transition: none !important;
+}
+
+/* бегущая строка */
+[data-marquee] { display: flex; overflow: hidden; user-select: none; }
+[data-marquee] > * { flex: none; display: flex; align-items: center; min-width: 100%; justify-content: space-around; animation: marquee var(--marquee-speed, 30s) linear infinite; }
+[data-marquee]:hover > * { animation-play-state: var(--marquee-hover, running); }
+@keyframes marquee { to { transform: translate3d(-100%, 0, 0); } }
+.is-still [data-marquee] > * { animation: none; }
+
+[data-drag-scroll] { cursor: grab; }
+[data-drag-scroll].is-dragging { cursor: grabbing; scroll-snap-type: none !important; }
+[data-drag-scroll].is-dragging * { pointer-events: none; }
+
+/* 3D-наклон карточек */
+[data-tilt] {
+  transform: perspective(900px) rotateX(var(--rx, 0deg)) rotateY(var(--ry, 0deg));
+  transition: transform .6s var(--ease-out);
+  transform-style: preserve-3d;
+}
+[data-tilt].is-tilting { transition: transform .12s linear; }
+
+/* лайтбокс */
+.lb-locked { overflow: hidden; }
+.lb {
+  position: fixed; inset: 0; z-index: 1001; display: grid; grid-template-columns: 64px 1fr 64px; align-items: center;
+  background: rgba(6, 8, 10, .92); -webkit-backdrop-filter: blur(8px); backdrop-filter: blur(8px);
+  opacity: 0; visibility: hidden; transition: opacity .35s, visibility .35s;
+}
+.lb.is-open { opacity: 1; visibility: visible; }
+.lb-fig { grid-column: 2; margin: 0; display: grid; place-items: center; gap: 14px; max-height: 100dvh; padding: 48px 0; }
+.lb-fig img {
+  max-width: 100%; max-height: calc(100dvh - 140px); border-radius: 14px; object-fit: contain;
+  opacity: 0; transform: scale(.97); transition: opacity .4s, transform .5s var(--ease-out);
+}
+.lb-fig img.is-loaded { opacity: 1; transform: none; }
+.lb-fig figcaption { color: rgba(255, 255, 255, .75); font-size: 14px; text-align: center; }
+.lb-btn {
+  width: 48px; height: 48px; border-radius: 50%; border: 1px solid rgba(255, 255, 255, .2);
+  background: rgba(255, 255, 255, .06); color: #fff; font-size: 26px; line-height: 1; cursor: pointer;
+  justify-self: center; transition: background .2s;
+}
+.lb-btn:hover { background: rgba(255, 255, 255, .16); }
+.lb-close { position: absolute; top: 16px; right: 16px; }
+.lb-prev { grid-column: 1; grid-row: 1; }
+.lb-next { grid-column: 3; grid-row: 1; }
+.lb-count { position: absolute; top: 28px; left: 24px; color: rgba(255, 255, 255, .6); font-size: 13px; font-variant-numeric: tabular-nums; }
+@media (max-width: 640px) {
+  .lb { grid-template-columns: 0 1fr 0; }
+  .lb-prev, .lb-next { position: absolute; bottom: 20px; }
+  .lb-prev { left: calc(50% - 60px); }
+  .lb-next { right: calc(50% - 60px); }
+  .lb-fig { padding: 64px 12px 90px; }
+}
+
+/* панель переключения концептов */
+.cbar {
+  position: fixed; left: 50%; bottom: max(14px, env(safe-area-inset-bottom)); z-index: 900;
+  transform: translateX(-50%);
+  display: flex; align-items: center; gap: 2px; padding: 5px;
+  border-radius: 999px;
+  background: rgba(18, 18, 20, .78); color: #fff;
+  -webkit-backdrop-filter: blur(14px) saturate(1.4); backdrop-filter: blur(14px) saturate(1.4);
+  border: 1px solid rgba(255, 255, 255, .12);
+  box-shadow: 0 12px 40px -12px rgba(0, 0, 0, .5);
+  font: 500 13px/1 system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  white-space: nowrap;
+  animation: cbar-in .8s 1.2s var(--ease-out) both;
+}
+@keyframes cbar-in { from { opacity: 0; transform: translate(-50%, 30px); } }
+.cbar a { color: inherit; text-decoration: none; display: inline-flex; align-items: center; gap: 7px; height: 34px; padding: 0 12px; border-radius: 999px; transition: background .2s; }
+.cbar a:hover { background: rgba(255, 255, 255, .12); }
+.cbar svg { width: 14px; height: 14px; fill: currentColor; opacity: .85; }
+.cbar-arrow { font-size: 18px; padding: 0 10px !important; }
+.cbar-cur { padding: 0 6px; opacity: .9; }
+.cbar-cur b { font-weight: 700; opacity: .55; margin-right: 2px; }
+.cbar-admin { background: #fff; color: #111 !important; font-weight: 600; margin-left: 4px; }
+.cbar-admin:hover { background: #e9e9e9 !important; }
+@media (max-width: 520px) {
+  .cbar { font-size: 12px; }
+  .cbar-home span { display: none; }
+  .cbar a { padding: 0 10px; height: 32px; }
+}
+@media print { .cbar { display: none; } }

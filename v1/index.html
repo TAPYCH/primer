@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Padel Apsny — падел-клуб в Сухуме · Онлайн-бронирование кортов</title>
+  <meta name="description" content="Падел в Сухуме: три профессиональных корта, вечернее освещение, тренеры и онлайн-бронирование за 30 секунд. Открыто ежедневно 07:00–23:00.">
+  <meta name="theme-color" content="#07090c">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=1920&q=70" imagesrcset="https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=1400&q=70 1400w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=1920&q=70 1920w" imagesizes="100vw">
+  <link rel="stylesheet" href="../assets/shared/motion.css">
+  <link rel="stylesheet" href="../assets/shared/booking-widget.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-concept="v1">
+  <div class="progress" data-progress></div>
+
+  <header class="header" data-header>
+    <a class="logo" href="#top" aria-label="Padel Apsny">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><g transform="rotate(-35 30 34)" fill="none" stroke="currentColor" stroke-linecap="round"><rect x="19" y="10" width="22" height="27" rx="11" stroke-width="4.5"/><path d="M30 37v14" stroke-width="5.5"/></g><g transform="rotate(-35 30 34)" fill="currentColor"><circle cx="26" cy="19" r="2"/><circle cx="34" cy="19" r="2"/><circle cx="30" cy="24" r="2"/><circle cx="26" cy="29" r="2"/><circle cx="34" cy="29" r="2"/></g><circle class="ball-dot" cx="48" cy="15" r="7"/></svg>
+      <span>PADEL<b>APSNY</b></span>
+    </a>
+    <nav class="menu" data-menu aria-label="Меню">
+      <a href="#courts">Корты</a>
+      <a href="#prices">Цены</a>
+      <a href="#training">Тренировки</a>
+      <a href="#gallery">Галерея</a>
+      <a href="#contacts">Контакты</a>
+      <a class="menu-phone" href="tel:+79400000000">+7 (940) 000-00-00</a>
+    </nav>
+    <a class="btn btn--neon header-cta" href="#booking">Забронировать</a>
+    <button class="burger" type="button" data-menu-toggle aria-label="Открыть меню" aria-expanded="false"><i></i><i></i><i></i></button>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true">
+        <img data-parallax="0.12" src="https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=1920&q=70"
+             srcset="https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=800&q=70 800w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=1400&q=70 1400w, https://images.unsplash.com/photo-1767128890583-b3f8dc30bdbc?auto=format&fit=crop&w=1920&q=70 1920w"
+             sizes="100vw" alt="" fetchpriority="high">
+      </div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-grain" aria-hidden="true"></div>
+
+      <div class="container hero-in">
+        <p class="hero-tag" data-reveal="fade"><span class="live-dot"></span>Сухум · открыто 07:00–23:00</p>
+        <h1 class="hero-title">
+          <span class="line" data-split>Падел</span>
+          <span class="line line--neon" data-split data-delay="150">под огнями</span>
+          <span class="line" data-split data-delay="300">Сухума<span class="neon-ball" aria-hidden="true"></span></span>
+        </h1>
+        <div class="hero-bottom">
+          <p class="hero-text" data-reveal data-delay="500">Три профессиональных корта у моря, LED-освещение для вечерних игр и онлайн-бронь за&nbsp;30&nbsp;секунд.</p>
+          <div class="hero-actions" data-reveal data-delay="650">
+            <a class="btn btn--neon btn--lg" href="#booking" data-magnetic>Забронировать корт <span aria-hidden="true">→</span></a>
+            <a class="btn btn--glass btn--lg" href="#about">Что такое падел</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="live-card" data-reveal="right" data-delay="800" aria-live="polite">
+        <div class="live-card-h"><span class="live-dot"></span>Сейчас на кортах</div>
+        <div class="live-card-row"><span>Свободных окон сегодня</span><b data-live-count>—</b></div>
+        <div class="live-card-row"><span>Ближайшее время</span><b data-live-next>—</b></div>
+        <a href="#booking" class="live-card-link">Выбрать время →</a>
+      </aside>
+
+      <a class="scroll-hint" href="#about" aria-label="Листать вниз"><span></span></a>
+    </section>
+
+    <div class="marquee" data-marquee aria-hidden="true">
+      <div><span>Padel Apsny</span><i></i><span>Сухум</span><i></i><span>07:00—23:00</span><i></i><span>3 корта</span><i></i><span>Тренеры</span><i></i></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container about">
+        <div class="about-text">
+          <p class="kicker" data-reveal>Что такое падел</p>
+          <h2 class="h2" data-split="words">Самый быстрорастущий спорт в мире. Теперь в&nbsp;Сухуме.</h2>
+          <p class="text-lg" data-reveal>Падел — это смесь тенниса и сквоша: корт меньше теннисного, стеклянные стены в игре, а пары 2×2 делают каждую партию азартной. Научиться можно за один вечер.</p>
+          <div class="stats" data-stagger="90">
+            <div class="stat"><b data-count="3">3</b><span>корта</span></div>
+            <div class="stat"><b data-count="16">16</b><span>часов в день</span></div>
+            <div class="stat"><b data-count="12" data-suffix=" мм">12 мм</b><span>закалённое стекло</span></div>
+            <div class="stat"><b data-count="500">500</b><span>люкс освещение</span></div>
+          </div>
+        </div>
+        <div class="features" data-stagger="120">
+          <article class="feature" data-tilt="6">
+            <span class="feature-n">01</span>
+            <h3>Легко начать</h3>
+            <p>Ракетка короче теннисной, мяч мягче. Уже в первой игре будут длинные розыгрыши.</p>
+          </article>
+          <article class="feature" data-tilt="6">
+            <span class="feature-n">02</span>
+            <h3>Игра 2×2</h3>
+            <p>Всегда командный формат. Идеально для друзей, пар и коллег.</p>
+          </article>
+          <article class="feature" data-tilt="6">
+            <span class="feature-n">03</span>
+            <h3>Стены в игре</h3>
+            <p>Мяч отскакивает от стекла, и розыгрыш продолжается. Тактика, реакция и эффектные удары.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- COURTS -->
+    <section class="section section--dark" id="courts">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-reveal>Корты</p>
+            <h2 class="h2" data-split="words">Три корта мирового уровня</h2>
+          </div>
+          <p class="section-sub" data-reveal>Панорамное стекло без каркаса по бокам, профессиональный газон и равномерный свет без теней.</p>
+        </div>
+        <div class="courts" data-stagger="120">
+          <article class="court" data-tilt="5">
+            <div class="court-img">
+              <img src="https://images.unsplash.com/photo-1673266893352-6de89e258064?auto=format&fit=crop&w=900&q=70" alt="Панорамный корт ночью, вид сверху" loading="lazy" decoding="async">
+              <span class="court-badge">Панорама</span>
+            </div>
+            <div class="court-body">
+              <h3>Корт 1</h3>
+              <ul class="court-specs"><li>Открытый</li><li>Стекло 12 мм</li><li>LED 500 лк</li></ul>
+              <div class="court-foot"><span>от <b><span data-price="min">2 400</span> ₽</b>/час</span><a class="btn btn--ghost btn--sm" href="#booking" data-book-court="c1">Выбрать</a></div>
+            </div>
+          </article>
+          <article class="court" data-tilt="5">
+            <div class="court-img">
+              <img src="https://images.unsplash.com/photo-1709587824674-78db9795ecf7?auto=format&fit=crop&w=900&q=70" alt="Панорамный падел-корт" loading="lazy" decoding="async">
+              <span class="court-badge">Панорама</span>
+            </div>
+            <div class="court-body">
+              <h3>Корт 2</h3>
+              <ul class="court-specs"><li>Открытый</li><li>Вид на горы</li><li>LED 500 лк</li></ul>
+              <div class="court-foot"><span>от <b><span data-price="min">2 400</span> ₽</b>/час</span><a class="btn btn--ghost btn--sm" href="#booking" data-book-court="c2">Выбрать</a></div>
+            </div>
+          </article>
+          <article class="court" data-tilt="5">
+            <div class="court-img">
+              <img src="https://images.unsplash.com/photo-1767128890439-1af9ca2ff1ac?auto=format&fit=crop&w=900&q=70" alt="Крытый падел-корт" loading="lazy" decoding="async">
+              <span class="court-badge court-badge--blue">Крытый</span>
+            </div>
+            <div class="court-body">
+              <h3>Корт 3</h3>
+              <ul class="court-specs"><li>Под крышей</li><li>Любая погода</li><li>Кондиционер</li></ul>
+              <div class="court-foot"><span>от <b><span data-price="min">2 400</span> ₽</b>/час</span><a class="btn btn--ghost btn--sm" href="#booking" data-book-court="c3">Выбрать</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICES -->
+    <section class="section" id="prices">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="kicker" data-reveal>Цены</p>
+          <h2 class="h2" data-split="words">Честные тарифы за корт</h2>
+          <p class="section-sub" data-reveal>Цена за весь корт, а не за игрока. Вчетвером выходит от 600 ₽ на человека.</p>
+        </div>
+        <div class="prices" data-stagger="110">
+          <article class="price">
+            <span class="price-time">07:00 — 12:00</span>
+            <h3>Утро</h3>
+            <div class="price-val"><b data-price="morning">2 400</b><span>₽ / час</span></div>
+            <ul><li>Тихие корты</li><li>Свежий воздух с моря</li><li>Будни</li></ul>
+            <a class="btn btn--ghost" href="#booking" data-book-duration="60">Выбрать утро</a>
+          </article>
+          <article class="price price--hot">
+            <span class="price-flag">Хит</span>
+            <span class="price-time">17:00 — 23:00</span>
+            <h3>Вечер</h3>
+            <div class="price-val"><b data-price="evening">3 600</b><span>₽ / час</span></div>
+            <ul><li>Игра под LED-светом</li><li>Самая живая атмосфера</li><li>Также суббота и воскресенье</li></ul>
+            <a class="btn btn--neon" href="#booking" data-book-duration="90">Выбрать вечер</a>
+          </article>
+          <article class="price">
+            <span class="price-time">12:00 — 17:00</span>
+            <h3>День</h3>
+            <div class="price-val"><b data-price="day">2 800</b><span>₽ / час</span></div>
+            <ul><li>Обеденная игра</li><li>Крытый корт в жару</li><li>Будни</li></ul>
+            <a class="btn btn--ghost" href="#booking" data-book-duration="60">Выбрать день</a>
+          </article>
+        </div>
+        <div class="extras" data-reveal>
+          <div><b>Ракетки</b><span>600 ₽ за 4 шт.</span></div>
+          <div><b>Мячи</b><span>400 ₽ новая банка</span></div>
+          <div><b>Тренер на игру</b><span>+2 000 ₽ / час</span></div>
+          <div><b>Абонемент 10 часов</b><span>−15% к тарифу</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING -->
+    <section class="section booking" id="booking">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-reveal>Онлайн-бронирование</p>
+            <h2 class="h2" data-split="words">Забронируй корт за&nbsp;30&nbsp;секунд</h2>
+          </div>
+          <p class="section-sub" data-reveal>Свободное время обновляется в реальном времени. Без регистрации: имя и телефон, остальное мы сделаем сами.</p>
+        </div>
+        <div data-booking-widget data-admin-url="../admin/" data-reveal="fade"></div>
+      </div>
+    </section>
+
+    <!-- TRAINING -->
+    <section class="section section--dark" id="training">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-reveal>Тренировки</p>
+            <h2 class="h2" data-split="words">Академия Padel Apsny</h2>
+          </div>
+          <p class="section-sub" data-reveal>От первой подачи до турниров. Тренеры с опытом в Испании, родине падела.</p>
+        </div>
+        <div class="programs" data-stagger="90">
+          <article class="program"><span class="program-ico">✦</span><h3>Первая игра</h3><p>60 минут с тренером: правила, хват, базовые удары. Ракетки включены.</p><b>1 500 ₽ / чел.</b></article>
+          <article class="program"><span class="program-ico">◆</span><h3>Индивидуально</h3><p>Персональная программа и разбор техники на видео.</p><b>4 500 ₽ / час</b></article>
+          <article class="program"><span class="program-ico">●</span><h3>Группы</h3><p>До 4 человек одного уровня. Утренние и вечерние слоты.</p><b>1 800 ₽ / чел.</b></article>
+          <article class="program"><span class="program-ico">▲</span><h3>Детская школа</h3><p>Для детей 7–14 лет. Координация, игра и турниры.</p><b>8 000 ₽ / мес.</b></article>
+        </div>
+        <div class="coaches" data-stagger="120">
+          <article class="coach">
+            <div class="coach-img"><img src="https://images.unsplash.com/photo-1646649851800-48dba35edc76?auto=format&fit=crop&w=700&h=860&q=70" alt="Тренер Хавьер Морено" loading="lazy" decoding="async"></div>
+            <div class="coach-info"><h3>Хавьер Морено</h3><span>Главный тренер · Валенсия</span></div>
+          </article>
+          <article class="coach">
+            <div class="coach-img"><img src="https://images.unsplash.com/photo-1646649852046-b758d2d573f3?auto=format&fit=crop&w=700&h=860&q=70" alt="Тренер Амра Гумба" loading="lazy" decoding="async"></div>
+            <div class="coach-info"><h3>Амра Гумба</h3><span>Новички и дети</span></div>
+          </article>
+          <article class="coach">
+            <div class="coach-img"><img src="https://images.unsplash.com/photo-1646651105454-6c167ea6f83b?auto=format&fit=crop&w=700&h=860&q=70" alt="Тренер Тимур Агрба" loading="lazy" decoding="async"></div>
+            <div class="coach-info"><h3>Тимур Агрба</h3><span>Продвинутый уровень и турниры</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section" id="gallery">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="kicker" data-reveal>Галерея</p>
+            <h2 class="h2" data-split="words">Атмосфера клуба</h2>
+          </div>
+          <p class="section-sub" data-reveal>Нажмите на фото, чтобы открыть в полном размере.</p>
+        </div>
+        <div class="gallery">
+          <a class="g g--tall" href="https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Смэш у сетки" data-reveal="clip"><img src="https://images.unsplash.com/photo-1646651105426-e8c8ee9badde?auto=format&fit=crop&w=800&q=70" alt="Смэш у сетки" loading="lazy" decoding="async"></a>
+          <a class="g" href="https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Ракетки для гостей" data-reveal="clip" data-delay="80"><img src="https://images.unsplash.com/photo-1658723826297-fe4d1b1e6600?auto=format&fit=crop&w=800&q=70" alt="Падел-ракетки и мячи" loading="lazy" decoding="async"></a>
+          <a class="g g--wide" href="https://images.unsplash.com/photo-1646649852033-7e0f3d679f8b?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Игра 2×2" data-reveal="clip" data-delay="160"><img src="https://images.unsplash.com/photo-1646649852033-7e0f3d679f8b?auto=format&fit=crop&w=1000&q=70" alt="Игроки после матча" loading="lazy" decoding="async"></a>
+          <a class="g" href="https://images.unsplash.com/photo-1715333155413-45f4aafe57b3?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Вечерняя тренировка" data-reveal="clip" data-delay="80"><img src="https://images.unsplash.com/photo-1715333155413-45f4aafe57b3?auto=format&fit=crop&w=800&q=70" alt="Игрок за стеклом корта" loading="lazy" decoding="async"></a>
+          <a class="g g--tall" href="https://images.unsplash.com/photo-1767128890954-20ce481be8f0?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Перерыв между сетами" data-reveal="clip" data-delay="160"><img src="https://images.unsplash.com/photo-1767128890954-20ce481be8f0?auto=format&fit=crop&w=800&q=70" alt="Игрок отдыхает на корте" loading="lazy" decoding="async"></a>
+          <a class="g" href="https://images.unsplash.com/photo-1646649853703-7645147474ba?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Синий корт" data-reveal="clip"><img src="https://images.unsplash.com/photo-1646649853703-7645147474ba?auto=format&fit=crop&w=800&q=70" alt="Ракетки и мячи на синем корте" loading="lazy" decoding="async"></a>
+          <a class="g" href="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?auto=format&fit=crop&w=1800&q=75" data-lightbox data-caption="Перед игрой" data-reveal="clip" data-delay="80"><img src="https://images.unsplash.com/photo-1657704358775-ed705c7388d2?auto=format&fit=crop&w=800&q=70" alt="Ракетка и мяч" loading="lazy" decoding="async"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section class="section section--dark reviews-sec">
+      <div class="container">
+        <div class="section-head section-head--center">
+          <p class="kicker" data-reveal>Отзывы</p>
+          <h2 class="h2" data-split="words">Нам ставят 4,9 из 5</h2>
+        </div>
+      </div>
+      <div class="reviews" data-marquee style="--marquee-speed:60s;--marquee-hover:paused">
+        <div>
+          <blockquote class="review"><p>«Пришли компанией впервые, через полчаса уже играли длинные розыгрыши. Вечером под светом — отдельный кайф.»</p><footer><b>Инал К.</b><span>★★★★★</span></footer></blockquote>
+          <blockquote class="review"><p>«Бронирую с телефона за минуту, всегда вижу свободное время. Корты идеальные, стекло чистое.»</p><footer><b>Екатерина М.</b><span>★★★★★</span></footer></blockquote>
+          <blockquote class="review"><p>«Хавьер за 5 тренировок поставил мне бандеху. Лучший тренер на побережье.»</p><footer><b>Дмитрий О.</b><span>★★★★★</span></footer></blockquote>
+          <blockquote class="review"><p>«Отдыхали в Сухуме и каждый вечер ходили на падел. Море рядом, атмосфера огонь.»</p><footer><b>Ольга Б.</b><span>★★★★★</span></footer></blockquote>
+          <blockquote class="review"><p>«Устроили корпоратив на трёх кортах — организовали всё под ключ, даже мини-турнир.»</p><footer><b>Нарт Х.</b><span>★★★★★</span></footer></blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container faq-wrap">
+        <div>
+          <p class="kicker" data-reveal>Вопросы</p>
+          <h2 class="h2" data-split="words">Частые вопросы</h2>
+          <p class="section-sub" data-reveal>Не нашли ответ? Напишите нам в Telegram, ответим за пару минут.</p>
+          <a class="btn btn--glass" href="#contacts" data-reveal>Написать в Telegram</a>
+        </div>
+        <div class="faq" data-stagger="70">
+          <details open><summary>Я никогда не играл в падел. Справлюсь?</summary><p>Конечно. Падел — самый дружелюбный ракеточный спорт для старта. Возьмите «Первую игру» с тренером: за час объясним правила и поставим базовые удары.</p></details>
+          <details><summary>Сколько человек нужно для игры?</summary><p>Классический формат — 2×2, четыре игрока. Можно играть и 1×1. Если не хватает партнёров, администратор поможет найти игроков вашего уровня.</p></details>
+          <details><summary>Нужна своя ракетка?</summary><p>Нет. Ракетки и мячи можно взять в аренду при бронировании или на ресепшене.</p></details>
+          <details><summary>Как отменить или перенести бронь?</summary><p>Бесплатно за 12 часов до игры: по ссылке из SMS или по телефону. Позже — по договорённости с администратором.</p></details>
+          <details><summary>Как оплатить?</summary><p>Онлайн картой при бронировании или на месте: наличные, карта, перевод.</p></details>
+          <details><summary>А если пойдёт дождь?</summary><p>Корт 3 крытый и работает в любую погоду. Бронь на открытом корте при дожде переносим бесплатно.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTS -->
+    <section class="section contacts" id="contacts">
+      <div class="container contacts-grid">
+        <div class="contacts-info">
+          <p class="kicker" data-reveal>Контакты</p>
+          <h2 class="h2" data-split="words">Ждём на корте</h2>
+          <ul class="contact-list" data-stagger="80">
+            <li><span>Адрес</span><b>г. Сухум, набережная Махаджиров</b></li>
+            <li><span>Телефон</span><a href="tel:+79400000000">+7 (940) 000-00-00</a></li>
+            <li><span>Часы работы</span><b>Ежедневно 07:00 — 23:00</b></li>
+            <li><span>Соцсети</span><b><a href="#">Instagram</a> · <a href="#">Telegram</a> · <a href="#">WhatsApp</a></b></li>
+          </ul>
+          <a class="btn btn--neon btn--lg" href="#booking" data-magnetic data-reveal>Забронировать корт →</a>
+        </div>
+        <div class="map" data-reveal="scale">
+          <iframe title="Padel Apsny на карте Сухума" src="https://yandex.ru/map-widget/v1/?ll=41.0150%2C43.0010&z=14&pt=41.0150,43.0010,pm2gnm" loading="lazy" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-big" aria-hidden="true">PADEL APSNY</div>
+      <div class="footer-row">
+        <span>© 2026 Padel Apsny · Сухум</span>
+        <nav><a href="#courts">Корты</a><a href="#prices">Цены</a><a href="#booking">Бронь</a><a href="#faq">FAQ</a></nav>
+        <span>Концепт сайта · демо</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/shared/booking-core.js"></script>
+  <script src="../assets/shared/booking-widget.js"></script>
+  <script src="../assets/shared/motion.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
